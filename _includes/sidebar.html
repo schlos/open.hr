@@ -1,0 +1,26 @@
+<nav id="sidebar">
+	<div class="language-toggle pull-right">
+		{% if site.lang == "de" %}
+		{% capture link1 %}{{ site.baseurl_root }}/en{{ page.url |replace_first:"index.html"}}{% endcapture %}
+		<a href="{{ link1 }}" >EN</a><br/>HR
+		{% else if site.lang == "en" %}
+		{% capture link2 %}{{ site.baseurl_root }}{{ page.url |replace_first:"index.html" }}{% endcapture %}
+		EN<br/><a href="{{ link2 }}">HR</a>
+		{% endif %}
+	</div>
+	<ul class="cd-navigation">
+		<li{% if page.menu_topics %} class="active"{% endif %}><a href="{{ site.baseurl }}/topics/">{% t navig.Topics %}</a></li>
+		<li{% if page.menu_projects %} class="active"{% endif %}><a href="{{ site.baseurl }}/projects/">{% t navig.Projects %}</a></li>
+		<li{% if page.menu_blog %} class="active"{% endif %}><a href="{{ site.baseurl }}/blog/">{% t navig.Blog %}</a></li>
+		<li{% if page.menu_services %} class="active"{% endif %}><a href="{{ site.baseurl }}/services/">{% t navig.Services %}</a></li>
+		<li{% if page.menu_donate %} class="active"{% endif %}><a href="{{ site.baseurl }}/donate/">{% t navig.Donate %}</a></li>
+	</ul>
+	<ul class="cd-navigation">
+		<li{% if page.menu_team %} class="active"{% endif %}><a href="{{ site.baseurl }}/team/">{% t navig.Team %}</a></li>
+		<li{% if page.menu_organisation %} class="active"{% endif %}><a href="{{ site.baseurl }}/organisation/">{% t navig.Organisation %}</a></li>
+		<li{% if page.menu_ngo %} class="active"{% endif %}><a href="{{ site.baseurl }}/ngo/">{% t navig.NGO %}</a></li>
+		<li{% if page.menu_press %} class="active"{% endif %}><a href="{{ site.baseurl }}/press/">{% t navig.Press %}</a></li>
+		<li{% if page.menu_jobs %} class="active"{% endif %}><a href="{{ site.baseurl }}/jobs/">{% t navig.Jobs %}</a></li>
+		<li{% if page.menu_impressum %} class="active"{% endif %}><a href="{{ site.baseurl }}/impressum/">{% t navig.Impressum %}</a></li>
+	</ul>
+</nav>
