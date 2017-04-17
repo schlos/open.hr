@@ -1,0 +1,37 @@
+<footer class="hidden-print">
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-xs-12 nav-items">
+					<ul>
+						<li{% if page.menu_team %} class="active"{% endif %}><a class="nav-link" href="{{ site.baseurl }}/team/">{% t navig.Team %}</a></li>
+						<li{% if page.menu_organisation %} class="active"{% endif %}><a class="nav-link" href="{{ site.baseurl }}/organisation/">{% t navig.Organisation %}</a></li>
+						<li{% if page.menu_ngo %} class="active"{% endif %}><a class="nav-link" href="{{ site.baseurl }}/ngo/">{% t navig.NGO %}</a></li>
+						<li{% if page.menu_press %} class="active"{% endif %}><a class="nav-link" href="{{ site.baseurl }}/press/">{% t navig.Press %}</a></li>
+						<li{% if page.menu_jobs %} class="active"{% endif %}><a class="nav-link" href="{{ site.baseurl }}/jobs/">{% t navig.Jobs %}</a></li>
+						<li{% if page.menu_impressum %} class="active"{% endif %}><a class="nav-link" href="{{ site.baseurl }}/impressum/">{% t navig.Impressum %}</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-2 col-xs-12 nav-items nav-items-right">
+					<ul>
+						<li><a class="nav-link" href="https://twitter.com/codeforcroatia" title="Code for Croatia Twitter"><i class="icon-twitter"></i></a></li>
+						<li><a class="nav-link" href="https://github.com/HrOpen" title="HrOpen Github"><i class="icon-github"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="cellar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<p>{% t footer.license %}</p>
+				</div>
+				<div class="col-md-3 col-md-offset-1">
+					<a href="{{ site.baseurl }}"><img class="logo-cellar" src="{{site.staticurl}}images/logo_footer.png" alt="{{site.brand_full}}"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
