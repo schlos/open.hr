@@ -6,7 +6,7 @@ brand_full: Hrvatska udruga za otvorene sustave i internet
 brand_small: Otvoreni sustavi
 brand_full_en: Croatian Society for Open System and Internet
 brand_small_en: HrOpen
-fullurl: 'http://schlos.github.io/open.hr'
+baseurl: 'http://schlos.github.io/open.hr'
 url: '/open.hr'
 staticurl: /static/
 
