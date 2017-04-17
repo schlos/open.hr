@@ -1,0 +1,102 @@
+---
+layout: default
+home: true
+card: true
+title: Hrvatska udruga za otvorene sustave i internet
+description: Otvoreni sustavi za digitalno društvo
+---
+<div class="start-banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="start-headline">{% t start.Slogan %}</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container start-opener">
+	<div class="row padded-row">
+		<div class="col-md-12">
+			<p class="intro">{% t start.Intro %}</p>
+			<p class="intro">{% t start.Welcome %}</p>
+		</div>
+		{% assign projects = site.projects %}
+		{% for project in projects %}
+		{% capture langcontent %}{{ project[site.lang].stats }}{% endcapture %}
+		{% if langcontent != '' %}
+		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-5 col-md-3 col-md-offset-0">
+			<div class="showcase">
+				<a href="{{ site.baseurl }}{{project.url}}"><img src="{{ site.staticurl }}images/{{project.img_square}}" alt="{{project.title | xml_escape}}" class="img-circle"/></a>
+				<h4 class="kpi">{{ langcontent }}</h4>
+				<p class="detail">
+					{% capture teasercontent %}{{ project[site.lang].teaser }}{% endcapture %}
+					{{ teasercontent }}
+				</p>
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+
+<div class="dark-section">
+	<div class="container padded-row">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>{% t start.Donate %}</h2>
+				<p>{% t start.DonateText %}</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-xs-12">
+				<p><a href="{{ site.baseurl }}/donate/" class="highlight-link">{% t start.DonateYes %}</a></p>
+				<p><a href="{{ site.baseurl }}/mission/" class="highlight-link">{% t start.DonateNo %}</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container padded-row">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>{% t start.OurBlog %}</h2>
+		</div>
+	</div>
+	<div class="row row-flex row-flex-wrap">
+		{% assign relatedArray = '' | split:':' %}
+		{% for post in site.posts limit: 4 %}
+		{% assign relatedArray = relatedArray | push: post %}
+		{% endfor %}
+		{% include post_previews.html posts=relatedArray %}
+	</div>
+</div>
+
+<div id="newsletter" class="dark-section darker">
+	<div class="container padded-row">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>{% t start.Newsletter %}</h2>
+				<p>{% t start.NewsletterText %}</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-xs-12 padded-top">
+				<form action="//okfn.us5.list-manage.com/subscribe/post?u=929f1e07936386d34833e20d1&amp;id=4ed2decd59" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="text-center mc-form" target="_blank">
+					<div class="input-group">
+						<input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="E-Mail" required>
+				  	<span class="input-group-btn">
+						<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">{% t start.NewsletterJa %}</button>
+						<span style="position: absolute; left: -5000px;">
+							<input type="text" name="b_929f1e07936386d34833e20d1_bb63fcab72" value="">
+							<!-- set to newsletter only-->
+							<input type="checkbox" value="1" checked="checked" name="group[16985][1]" id="mce-group[16985]-16985-0" style="display:none;">
+						</span>
+				  	</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
