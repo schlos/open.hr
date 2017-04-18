@@ -1,5 +1,7 @@
-source "https://rubygems.org"
-
-group :jekyll_plugins do
-  gem "octopress-paginate", :git => "git://github.com/mshick/paginate", :branch => "jekyll3"
-end
+source 'https://rubygems.org'
+gem 'jekyll'
+gem 'github-pages'
+gem 'octopress-autoprefixer'
+gem 'jekyll-tagging', :git => 'https://github.com/pattex/jekyll-tagging.git'
+gem 'icalendar'
+gem 'selene'
