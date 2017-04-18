@@ -9,7 +9,7 @@ description: Otvoreni sustavi za digitalno društvo
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="start-headline">{% t start.Slogan %}</h1>
+				<h1 class="start-headline">Otvoreni sustavi<br/>za digitalno društvo</h1>
 			</div>
 		</div>
 	</div>
@@ -18,8 +18,8 @@ description: Otvoreni sustavi za digitalno društvo
 <div class="container start-opener">
 	<div class="row padded-row">
 		<div class="col-md-12">
-			<p class="intro">{% t start.Intro %}</p>
-			<p class="intro">{% t start.Welcome %}</p>
+			<p class="intro">Hrvatska udruga za otvorene sustave i internet je organizacija civilnog društva koja se zalaže za primjenu novih informatičkih tehnologija u području otvorenih računarskih sustava, otvoreno znanje, otvorene podatke i uključenost zainteresirane javnosti.</p>
+			<p class="intro">Naučite više o <a href="/organisation/">organizaciji</a>, našim <a href="/mission/">ciljevima</a>, i našim <a href="/projects/">projektima</a>.</p>
 		</div>
 		{% assign projects = site.projects %}
 		{% for project in projects %}
@@ -44,14 +44,15 @@ description: Otvoreni sustavi za digitalno društvo
 	<div class="container padded-row">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>{% t start.Donate %}</h2>
-				<p>{% t start.DonateText %}</p>
+				<h2>Donacije</h2>
+				<p>Hrvatska udruga za otvorene sustave i internet je nezavisna, nepristrana i neprofitna organizacija. Na svim našim projektima rade volonteri. 
+                                   Stoga pozdravljamo svaku donaciju jer će i najmanja donacija pružiti podršku i infrastrukturu za dobre ljude koji volontiraju kod nas. Također primamo donacije kao podršku nekom specifičnom projektu.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 col-xs-12">
-				<p><a href="{{ site.baseurl }}/donate/" class="highlight-link">{% t start.DonateYes %}</a></p>
-				<p><a href="{{ site.baseurl }}/mission/" class="highlight-link">{% t start.DonateNo %}</a></p>
+				<p><a href="{{ site.baseurl }}/donate/" class="highlight-link">Radite odličan posao i želim podržati Otvorene sustave!</a></p>
+				<p><a href="{{ site.baseurl }}/mission/" class="highlight-link">Želim čuti malo više o tome što radite.</a></p>
 			</div>
 		</div>
 	</div>
@@ -60,7 +61,7 @@ description: Otvoreni sustavi za digitalno društvo
 <div class="container padded-row">
 	<div class="row">
 		<div class="col-md-12">
-			<h2>{% t start.OurBlog %}</h2>
+			<h2>Vijesti iz našeg bloga</h2>
 		</div>
 	</div>
 	<div class="row row-flex row-flex-wrap">
@@ -76,8 +77,8 @@ description: Otvoreni sustavi za digitalno društvo
 	<div class="container padded-row">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>{% t start.Newsletter %}</h2>
-				<p>{% t start.NewsletterText %}</p>
+				<h2>Newsletter</h2>
+				<p>Želite li primati obavijesti o našim aktivnostima? Prijavite se na naš newsletter:</p>
 			</div>
 		</div>
 		<div class="row">
@@ -86,7 +87,7 @@ description: Otvoreni sustavi za digitalno društvo
 					<div class="input-group">
 						<input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="E-Mail" required>
 				  	<span class="input-group-btn">
-						<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">{% t start.NewsletterJa %}</button>
+						<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">Pošalji</button>
 						<span style="position: absolute; left: -5000px;">
 							<input type="text" name="b_929f1e07936386d34833e20d1_bb63fcab72" value="">
 							<!-- set to newsletter only-->
