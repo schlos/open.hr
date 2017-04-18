@@ -151,8 +151,7 @@ meta:
     output: true
     has_translation: true
     translate_link: true
-    title_hr: Glavni izbornik
-    title_en: Main menu
+    title: Glavni izbornik
     languages:
       - hr
     toc:
@@ -179,8 +178,7 @@ meta:
     output: true
     has_translation: true
     translate_link: true
-    title_hr: Mali izbornik
-    title_en: Small menu
+    title: Mali izbornik
     languages:
       - hr
     toc:
