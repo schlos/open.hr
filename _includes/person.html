@@ -1,0 +1,73 @@
+{% assign person=include.person %}
+<div class="row person" id="{{ person.name | slugify | uri_escape }}">
+  <div class="person-image-col col-md-4">
+    <div class="person-image" style="background-image:url('{{ site.staticurl }}images/team/{% if person.img %}{{ person.img }}{% else %}silhouette{% endif %}.jpg')"></div>
+  </div>
+  <div class="person-col col-md-8 order-{{ include.order }}">
+    <div>
+      <h3>{% if person.title.size > 0 %}{{ person.title }} {% endif %}{{ person.name }}</h3>
+      {% if site.lang == "en" %}
+        {% if person.bio_en.size > 0 %}
+          {{ person.bio_en | markdownify }}
+        {% else if person.bio.size > 0 %}
+          {{ person.bio | markdownify }}
+        {% endif %}
+      {% else %}
+        {% if person.bio.size > 0 %}
+          {{ person.bio | markdownify }}
+        {% endif %}
+      {% endif %}
+      <dl class="icon-list">
+      {% if person.twitter %}
+        <dt><i class="icon-twitter"></i></dt>
+        <dd>
+          <a href="https://twitter.com/{{ person.twitter }}">{{ person.twitter }}</a>
+        </dd>
+      {% endif %}
+      {% if person.github %}
+        <dt><i class="icon-github"></i></dt>
+        <dd>
+          <a href="https://github.com/{{ person.github }}">{{ person.github }}</a>
+        </dd>
+      {% endif %}
+      {% if person.website %}
+        <dt><i class="icon-umbrella"></i></dt>
+        <dd>
+          <a href="{{ person.website }}">{{ person.website }}</a>
+        </dd>
+      {% endif %}
+      {% if person.mail %}
+        <dt><i class="icon-paper-plane"></i></dt>
+        <dd>
+          <a href="mailto:{{ person.mail }}">{{ person.mail }}</a>
+        </dd>
+      {% endif %}
+      </dl>
+      {% assign has_projects = 0 %}
+      {% assign projects = site.projects | sort:"featured","last" %}
+      {% for project in projects %}
+          {% if project.type != "archive" %}
+            {% for p in project.people %}
+              {% if p.name == person.name %}
+                {% if has_projects == 0 %}
+                  {% assign has_projects = 1 %}
+                  <small>
+                    {{ person.name | split: " " | first }} {% t person.WorksOn %}:
+                    <ul class="list-inline">
+                {% endif %}
+                <li>
+                  <a href="{{ site.baseurl }}/{{ project.url|replace_first:'/',''|replace_first:'index.html' }}">
+                    {{ project.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        {% if has_projects == 1 %}
+          </ul>
+        {% endif %}
+      </small>
+    </div>
+  </div>
+</div>
