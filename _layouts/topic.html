@@ -1,0 +1,40 @@
+---
+layout: default
+menu_topic: yes
+
+---
+
+<div class="lurking-header topic">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="post-content">{{ content }}</div>
+    </div>
+  </div>
+</div>
+<hr />
+<h3 class="subtle-section">{% t topic.OtherTopics %}</h3>
+
+<div class="row">
+  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10">
+    <div class="row row-flex row-flex-wrap">
+      {% assign topic = site.pages|where:"layout","topic"|where:"lang",site.lang|sort:"title" %}
+      {% for topic in topics %}
+      {% if topic.title != page.title %}
+
+        <div class="project-item flex-col col-md-6 col-sm-6 col-xs-12">
+          <div class="project-box text-only mini">
+            <a href="{{ site.baseurl }}/{{ topic.url|replace_first:'/',''|replace_first:'index.html','' }}">
+              <div class="project-box-inner">
+                <h3>{{ topic.title }}</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
