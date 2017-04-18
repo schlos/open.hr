@@ -1,15 +1,6 @@
+# Generic settings
 markdown: kramdown
 highlighter: pygments
-
-# Site settings
-brand_full: Hrvatska udruga za otvorene sustave i internet
-brand_small: Otvoreni sustavi
-brand_full_en: Croatian Society for Open System and Internet
-brand_small_en: HrOpen
-baseurl: 'http://schlos.github.io/open.hr'
-url: '/open.hr'
-staticurl: /static/
-
 exclude:
   - "CNAME"
   - "Gemfile*"
@@ -24,24 +15,113 @@ exclude:
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
+
 defaults:
   - scope:
       path: ""
       type: "projects"
     values:
       layout: "project"
+
 collections:
   projects:
     output: true
     permalink: /projekte/:path/
+
 permalink: blog/:year/:month/:title/
-languages: ["hr", "en"]
-exclude_from_localizations: ["static", "files", "style", "js", "fonts", "images", "search.json"]
+
+# languages: ["hr", "en"]
+
+languages:
+  -
+    - en
+    - English
+  -
+    - hr
+    - hrvatski
+
+# exclude_from_localizations: ["static", "files", "style", "js", "fonts", "images", "search.json"]
+
 tag_page_layout: tag_index
+
 tag_page_dir: blog/tags
+
 tag_permalink_style: pretty
+
 sass:
   sass_dir: static/style/_scss
   style: compressed
+
 kramdown:
   smart_quotes: ["ldquo", "rsquo", "bdquo", "ldquo"]
+
+# Site settings
+brand_full: Hrvatska udruga za otvorene sustave i internet
+brand_small: Otvoreni sustavi
+brand_full_en: Croatian Society for Open System and Internet
+brand_small_en: HrOpen
+baseurl: 'http://schlos.github.io/open.hr'
+url: '/open.hr'
+staticurl: /static/
+
+# Team 
+
+team:
+  -
+      name: Xcvu Y2h
+      img: xcvuy2h
+      position_hr: Predsjednik
+      position_en: President
+      bio_hr: "xcvuy2h"
+      bio_en: "xcvuy2h"
+      staff: 0
+      steering_committee: 1
+      supervisory_board: 0
+      advisory_board: 0
+      mail: xcvuy2h@xcvuy2h.hh
+      twitter: xcvuy2h
+      website: http://xcvuy2h.hh
+      github: xcvuy2h
+  -
+      name: Xcvu Y3h
+      img: xcvuy2h
+      position_hr: Dopredsjednik
+      position_en: Vicepresident
+      bio_hr: "xcvuy2h"
+      bio_en: "xcvuy2h"
+      staff: 0
+      steering_committee: 1
+      supervisory_board: 0
+      advisory_board: 0
+      mail: xcvuy2h@xcvuy2h.hh
+      twitter: xcvuy2h
+      website: http://xcvuy2h.hh
+      github: xcvuy2h
+
+# Bodies and members
+
+advisory_board:
+
+steering_committee:
+  -
+      name: Xcvu Y2h
+  -
+      name: Y
+  -
+      name: P
+  -
+      name: m
+
+supervisory_board:
+  -
+      name: Anamarija
+      mail: 
+  -
+      name: Ina
+      mail: 
+  -
+      name: Lucija
+      mail: 
+  -
+      name: Dubravka
+      mail: 
