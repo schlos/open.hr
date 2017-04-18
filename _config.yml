@@ -125,3 +125,105 @@ supervisory_board:
   -
       name: Dubravka
       mail: 
+
+# Menu
+
+top_menu:
+  - topics
+  - projects
+  - blog
+  - services
+  - donate
+  
+bottom_menu:
+  - team
+  - board
+  - organisation
+  - press
+  - jobs
+  - contact
+  
+# Metadata
+
+meta:
+  top_menu:
+    label: top_menu
+    output: true
+    has_translation: true
+    translate_link: true
+    title_hr: Glavni izbornik
+    title_en: Main menu
+    languages:
+      - hr
+    toc:
+      entry_point: 'index'
+      order:
+        - topics
+        - projects
+        - blog
+        - services
+        - donate
+      pages:
+        - title: 'Teme'
+          slug: 'topics'
+        - title: 'Projekti'
+          slug: 'projects'
+        - title: 'Blog'
+          slug: 'blog'
+        - title: 'Usluge'
+          slug: 'services'
+        - title: "Doniraj"
+          slug: 'donate'
+  bottom_menu:
+    label: bottom_menu
+    output: true
+    has_translation: true
+    translate_link: true
+    title_hr: Mali izbornik
+    title_en: Small menu
+    languages:
+      - hr
+    toc:
+      entry_point: 'index'
+      order:
+        - team
+        - board
+        - organisation
+        - press
+        - jobs
+        - contact
+      pages:
+        - title: 'Tim'
+          slug: 'team'
+        - title: 'Tijela'
+          slug: 'tijela'
+        - title: 'Udruga'
+          slug: 'organisation'
+        - title: 'Press'
+          slug: 'press'
+        - title: "Poslovi"
+          slug: 'jobs'
+        - title: "Kontakt"
+          slug: 'contact'
+  contribute:
+    label: contribute
+    output: true
+    title: Contribute
+    has_translation: false
+    toc:
+      chapters:
+        - title: 'Contributing'
+        - title: 'Adding A Page'
+          slug: 'adding'
+        - title: 'Editing A Page'
+          slug: 'editing'
+        - title: 'Adding A Term To The Glossary'
+          slug: 'add-term'
+        - title: 'Adding A Resource To The Library'
+          slug: 'add-resource'
+        - title: 'Translating The Pages'
+          slug: 'translate-guide'
+        - title: 'Translating The Glossary'
+          slug: 'translate-glossary'
+        - title: 'Markdown Examples'
+          slug: 'markdown-examples'
