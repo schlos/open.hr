@@ -63,6 +63,9 @@ brand_small_en: HrOpen
 baseurl: 'http://schlos.github.io/openhr'
 url: 'http://schlos.github.io/openhr'
 staticurl: /static/
+default_lang: hr
+github_user:  codeforcroatia
+github_repo:  openhr
 
 # Team 
 
@@ -162,7 +165,7 @@ meta:
         - blog
         - services
         - donate
-      pages:
+      chapters:
         - title: 'Teme'
           slug: 'topics'
         - title: 'Projekti'
@@ -190,7 +193,7 @@ meta:
         - press
         - jobs
         - contact
-      pages:
+      chapters:
         - title: 'Tim'
           slug: 'team'
         - title: 'Tijela'
