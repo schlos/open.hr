@@ -1,10 +1,10 @@
-{% strip %}<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {% if page.home %}<title>Hrvatska udruga za otvorene sustave i internet - otvoreni sustavi za digitalno društvo</title>
-  {% else %}<title>{% t page.title %} &gt; Hrvatska udruga za otvorene sustave i internet</title>{% endif %}
+  {% if page.home %}<title>{% page.title %} &gt; {% page.description %}</title>
+  {% else %}<title>{% page.title %} &gt; {% site.brand_full %}</title>{% endif %}
   {% if page.card %}
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@codeforcroatia" />
@@ -77,4 +77,3 @@
 
 </body>
 </html>
-{% endstrip %}
