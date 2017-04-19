@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {% if page.home %}<title>{% page.title %} &gt; {% page.description %}</title>
+  {% if page.home %}<title>{% page.title %} &gt; {% page.title_tagline %}</title>
   {% else %}<title>{% page.title %} &gt; {% site.brand_full %}</title>{% endif %}
   {% if page.card %}
   <meta name="twitter:card" content="summary" />
@@ -71,8 +71,8 @@
 
 {% include sidebar.html %}
 
-<script src="{{ site.staticurl }}js/jqlite.min.js"></script>
-<script src="{{ site.staticurl }}js/index.js"></script>
+<script src="/js/jqlite.min.js"></script>
+<script src="/js/index.js"></script>
 {% include analytics.html %}
 
 </body>
