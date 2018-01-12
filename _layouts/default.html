@@ -1,79 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {% if page.home %}<title>{% page.title %} &gt; {% page.title_tagline %}</title>
-  {% else %}<title>{% page.title %} &gt; {% site.brand_full %}</title>{% endif %}
-  {% if page.card %}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@codeforcroatia" />
-  <meta name="twitter:creator" content="@codeforcroatia" />
-  {% if page.title %}
-  <meta name="og:title" content="{{ page.title }}" />
-  <meta name="twitter:title" content="{{ page.title }}" />
-  {% else %}
-  <meta name="og:title" content="{{ site.title }}">
-  <meta name="twitter:title" content="{{ site.title }}" />
-  {% endif %}
-  {% if page.url %}
-  <meta name="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
-  {% endif %}
-  {% if page.excerpt %}
-  <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html | truncatewords: 50 | truncate: 199 }}" />
-  <meta name="og:description" content="{{ page.excerpt | markdownify | strip_html | truncatewords: 50 | truncate: 199 }}" />
-  {% else if page.description %}
-  <meta name="twitter:description" content="{{ page.description }}" />
-  <meta name="og:description" content="{{ page.description }}" />
-  {% else if site.description %}
-  <meta name="twitter:description" content="{{ site.description }}" />
-  <meta name="og:description" content="{{ site.description }}" />
-  {% endif %}
-  {% if page.image %}
-  <meta name="twitter:image:src" content="{{site.fullurl}}{{ page.image.src }}" />
-  <meta name="og:image" content="{{site.fullurl}}{{ page.image.src }}" />
-  {% else %}
-  <meta name="twitter:image:src" content="{{site.fullurl}}{{ site.staticurl }}images/logo_black_solid.png" />
-  <meta name="og:image" content="{{site.fullurl}}{{ site.staticurl }}images/logo_black_solid.png" />
-  {% endif %}
-  {% endif %}
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}" />
-  {% endif %}
-  <meta property="og:type" content="website" />
-  <link href="{{ site.staticurl }}style/style.css" rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/atom+xml" title="{% t blog.FeedTitle %}" href="{{ site.fullurl }}/atom.xml"/>
-  <link rel="alternate" type="application/rss+xml" title="{% t blog.FeedTitle %}" href="{{ site.fullurl }}/feed/" />
-  <link rel="shortcut icon" href="{{ site.staticurl }}images/favicon.ico">
-</head>
-<body>
 
-{% include header.html %}
+  {% include archive/head.html %}
 
-<main id="main-content">
-  {% if page.home %}
-  {{ content }}
-  {% else %}
-  <nav class="navbar navbar-open" role="navigation">
-    <div class="container">
-      {% if page.headline %}
-      <h1 class="header-headline">{{ page.headline }}</h1>
-      {% endif %}
+  <body>
+
+    {% include archive/header.html %}
+
+    <div>
+      {{ content }}
     </div>
-  </nav>
-  <div id="main-container" class="container">
-    {{ content }}
-  </div>
-  {% endif %}
-  {% include footer.html %}
-</main>
 
-{% include sidebar.html %}
+    {% include archive/footer.html %}
+    
+    {% case site.analytics.provider %}
+      {% when "google" %}
+        {% include analytics/google.html %}
+    {% endcase %}
 
-<script src="/js/jqlite.min.js"></script>
-<script src="/js/index.js"></script>
-{% include analytics.html %}
+  </body>
 
-</body>
 </html>

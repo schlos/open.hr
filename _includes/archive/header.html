@@ -1,0 +1,18 @@
+<header class="header-background">
+  <div class="clearfix border-bottom-thick header-border">
+    <div class="left sm-width-full py-1 mt-1 mt-lg-0">
+      <a class="align-middle link-primary-header header-link header-text" href="{{ site.baseurl }}/">
+        {{ site.title }}
+      </a>
+    </div>
+    <ul class="list-reset right py-1 header-text font-smoothing">
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <li class="inline-block">
+          <a class="align-middle link-primary-header header-link header-text mr-2" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</header>

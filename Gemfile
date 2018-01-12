@@ -1,7 +1,2 @@
-source 'https://rubygems.org'
-gem 'jekyll'
-gem 'github-pages'
-gem 'octopress-autoprefixer'
-gem 'jekyll-tagging', :git => 'https://github.com/pattex/jekyll-tagging.git'
-gem 'icalendar'
-gem 'selene'
+source "https://rubygems.org"
+gemspec

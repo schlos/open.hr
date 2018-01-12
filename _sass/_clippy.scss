@@ -1,0 +1,53 @@
+// Styling for clipboard.js
+
+/* ==========================================================================
+   Main clippy
+   ========================================================================== */
+
+.clippy {
+    margin-top: -3px;
+    position: relative;
+    top: 3px;
+}
+
+.btn[disabled] .clippy {
+    opacity: .3;
+}
+
+/* Code highlight clippy
+   ========================================================================== */
+
+.highlight {
+    position: relative;
+    overflow: visible;
+}
+
+.highlight code {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.highlight .btn {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.highlight:hover .btn,
+.highlight .btn:focus {
+    opacity: 1;
+}
+
+code {
+    background-color: #E8F5F2;
+    border-radius: 3px;
+    color: #1BC1A1;
+    font-size: 85%;
+    margin: 0;
+    padding: 0.2em;
+}

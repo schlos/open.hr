@@ -1,230 +1,61 @@
-# Generic settings
-markdown: kramdown
-highlighter: pygments
-exclude:
-  - "CNAME"
-  - "Gemfile*"
-  - "*.sh"
-  - "browserslist"
-  - "README.md"
-  - ".idea/"
-  - ".git/"
-  - "scripts/"
-  - "_site/"
-  - "vendor/"
-gems:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-
-collections:
-  projects:
-    output: true
-    permalink: /projekte/:path/
-
-permalink: blog/:year/:month/:title/
-
-# languages: ["hr", "en"]
-
-languages:
-  -
-    - en
-    - English
-  -
-    - hr
-    - hrvatski
-
-# exclude_from_localizations: ["static", "files", "style", "js", "fonts", "images", "search.json"]
-
-tag_page_layout: tag_index
-
-tag_page_dir: blog/tags
-
-tag_permalink_style: pretty
-
-sass:
-  sass_dir: _sass
-  style: compressed
-
-kramdown:
-  smart_quotes: ["ldquo", "rsquo", "bdquo", "ldquo"]
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-brand_full: Hrvatska udruga za otvorene sustave i internet
-brand_small: Otvoreni sustavi
-brand_full_en: Croatian Society for Open System and Internet
-brand_small_en: HrOpen
-baseurl: 'http://schlos.github.io/openhr'
-url: 'http://schlos.github.io/openhr'
-staticurl: /static/
-default_lang: hr
-github_user:  codeforcroatia
-github_repo:  openhr
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+#
+title: Stylish Portfolio
+tagline: Otvoreni za partnerstvo jer znamo kako
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+archive_description: Arhivska građa Udruge
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+github_repo: imamopravoznati-admin # the GitHub repo name for this project
+#
+# Site metadata
+full_title: Hrvatska udruga za otvorene sustave i internet
 
-# Team 
-
-team:
-  -
-      name: Xcvu Y2h
-      img: xcvuy2h
-      position_hr: Predsjednik
-      position_en: President
-      bio_hr: "xcvuy2h"
-      bio_en: "xcvuy2h"
-      staff: 0
-      steering_committee: 1
-      supervisory_board: 0
-      advisory_board: 0
-      mail: xcvuy2h@xcvuy2h.hh
-      twitter: xcvuy2h
-      website: http://xcvuy2h.hh
-      github: xcvuy2h
-  -
-      name: Xcvu Y3h
-      img: xcvuy2h
-      position_hr: Dopredsjednik
-      position_en: Vicepresident
-      bio_hr: "xcvuy2h"
-      bio_en: "xcvuy2h"
-      staff: 0
-      steering_committee: 1
-      supervisory_board: 0
-      advisory_board: 0
-      mail: xcvuy2h@xcvuy2h.hh
-      twitter: xcvuy2h
-      website: http://xcvuy2h.hh
-      github: xcvuy2h
-
-# Bodies and members
-
-advisory_board:
-
-steering_committee:
-  -
-      name: Xcvu Y2h
-  -
-      name: Y
-  -
-      name: P
-  -
-      name: m
-
-supervisory_board:
-  -
-      name: Anamarija
-      mail: 
-  -
-      name: Ina
-      mail: 
-  -
-      name: Lucija
-      mail: 
-  -
-      name: Dubravka
-      mail: 
-
-# Menu
-
-top_menu:
-  - topics
-  - projects
-  - blog
-  - services
-  - donate
-  
-bottom_menu:
-  - team
-  - board
-  - organisation
-  - press
-  - jobs
-  - contact
-  
-# Metadata
-
-meta:
-  top_menu:
-    label: top_menu
-    output: true
-    has_translation: true
-    translate_link: true
-    title: Glavni izbornik
-    languages:
-      - hr
-    toc:
-      entry_point: 'index'
-      order:
-        - topics
-        - projects
-        - blog
-        - services
-        - donate
-      chapters:
-        - title: 'Teme'
-          slug: 'topics'
-        - title: 'Projekti'
-          slug: 'projects'
-        - title: 'Blog'
-          slug: 'blog'
-        - title: 'Usluge'
-          slug: 'services'
-        - title: "Doniraj"
-          slug: 'donate'
-  bottom_menu:
-    label: bottom_menu
-    output: true
-    has_translation: true
-    translate_link: true
-    title: Mali izbornik
-    languages:
-      - hr
-    toc:
-      entry_point: 'index'
-      order:
-        - team
-        - board
-        - organisation
-        - press
-        - jobs
-        - contact
-      chapters:
-        - title: 'Tim'
-          slug: 'team'
-        - title: 'Tijela'
-          slug: 'tijela'
-        - title: 'Udruga'
-          slug: 'organisation'
-        - title: 'Press'
-          slug: 'press'
-        - title: "Poslovi"
-          slug: 'jobs'
-        - title: "Kontakt"
-          slug: 'contact'
-  contribute:
-    label: contribute
-    output: true
-    title: Contribute
-    has_translation: false
-    toc:
-      chapters:
-        - title: 'Contributing'
-        - title: 'Adding A Page'
-          slug: 'adding'
-        - title: 'Editing A Page'
-          slug: 'editing'
-        - title: 'Adding A Term To The Glossary'
-          slug: 'add-term'
-        - title: 'Adding A Resource To The Library'
-          slug: 'add-resource'
-        - title: 'Translating The Pages'
-          slug: 'translate-guide'
-        - title: 'Translating The Glossary'
-          slug: 'translate-glossary'
-        - title: 'Markdown Examples'
-          slug: 'markdown-examples'
+# Site contact details
+owner: Start Bootstrap
+email: name@example.com
+address:
+  - line: Unska 3
+  - line: "10000 Zagreb, Hrvatska"
+  # Feel free to add more lines here 
+telephone: (123) 456-7890
+copyright: Your Site
+# 
+# Optional social link, you can choose from the following options:
+# twitter (default), instagram, medium, or dribbble
+facebook_username: example
+twitter_username: example
+github_username: example
+#
+# API settings
+google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmXX
+#
+# Build settings
+markdown: kramdown
+#
+# Set theme color here for archive site
+# Choose from: black (default), blue, gray, magenta, orange, red, white, and yellow; violet (custom).
+theme_color: blue
+#
+# Site analytics
+analytics:
+  provider: google
+  google:
+    id: UA-46708458-XX
