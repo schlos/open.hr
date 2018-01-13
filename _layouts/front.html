@@ -11,6 +11,12 @@
   {% include frontpage/services.html %}
   {% include frontpage/callout.html %}
   {% include frontpage/portfolio.html %}
+  {% case site.call_to_action %}
+    {% when "membership" %}
+      {% include frontpage/call-to-action_membership.html %}
+    {% when "dors" %}
+      {% include frontpage/call-to-action_dors.html %}
+  {% endcase %}
   {% include frontpage/call-to-action.html %}
   {% include frontpage/map.html %}
   {% include frontpage/footer.html %}

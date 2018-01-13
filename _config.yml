@@ -17,21 +17,23 @@
 title: HrOpen
 tagline: Otvoreni za partnerstvo jer znamo kako
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Cilj Hrvatske udruge za otvorene sustave i Internet je promicanje i 
+  poticanje razvitka otvorenih računarskih sustava i Interneta u Republici Hrvatskoj. 
+  HrOpen nije usmjeren samo prema vrhunskim tehnologijama, otvoreni sustavi 
+  podrazumijevaju otvorene računalne sustave, ali i otvorene ljude koji se njima koriste.
 archive_description: Arhivska građa Udruge
 baseurl: "/openhr" # the subpath of your site, e.g. /blog
 archive_slug: "/arhiva"
 url: "https://schlos.github.io" # the base hostname & protocol for your site
 github_repo: openhr # the GitHub repo name for this project
+call_to_action: dors # can be "dors" or "membership"
 #
 # Site metadata
 full_title: Hrvatska udruga za otvorene sustave i internet
 #
 # Site contact details
 owner: Hrvatska udruga za otvorene sustave i internet
-email: name@example.com
+email: udruga@open.hr
 address:
   - line: Unska 3
   - line: "10000 Zagreb, Hrvatska"
@@ -63,7 +65,7 @@ copyright:
 # leave blank if you dont have account
 facebook_username: example
 twitter_username:
-github_username: example
+github_username: HrOpen-Croatia
 #
 # API settings
 google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ
@@ -79,4 +81,4 @@ theme_color: blue
 analytics:
   provider: google
   google:
-    id: UA-46708458-XX
+    id: UA-36427329-1
