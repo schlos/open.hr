@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 #
-title: Stylish Portfolio
+title: HrOpen
 tagline: Otvoreni za partnerstvo jer znamo kako
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -29,7 +29,7 @@ github_repo: imamopravoznati-admin # the GitHub repo name for this project
 full_title: Hrvatska udruga za otvorene sustave i internet
 
 # Site contact details
-owner: Start Bootstrap
+owner: Hrvatska udruga za otvorene sustave i internet
 email: name@example.com
 address:
   - line: Unska 3
@@ -45,7 +45,7 @@ twitter_username: example
 github_username: example
 #
 # API settings
-google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmXX
+google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ
 #
 # Build settings
 markdown: kramdown
