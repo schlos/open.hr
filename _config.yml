@@ -61,7 +61,7 @@ copyright:
 # Optional social link, you can choose from the following options:
 # twitter (default), instagram, medium, or dribbble
 facebook_username: example
-twitter_username: example
+twitter_username:
 github_username: example
 #
 # API settings
