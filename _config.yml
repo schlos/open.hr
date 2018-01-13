@@ -58,8 +58,8 @@ license_url: http://creativecommons.org/licenses/by-sa/4.0/deed.en_US
 # Copyright - leave blank to use open license instead
 copyright:
 # 
-# Optional social link, you can choose from the following options:
-# twitter (default), instagram, medium, or dribbble
+# Optional social link, you can fill in below usernames
+# leave blank if you dont have account
 facebook_username: example
 twitter_username:
 github_username: example
