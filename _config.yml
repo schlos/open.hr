@@ -22,7 +22,6 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 archive_description: Arhivska građa Udruge
 baseurl: "/openhr/" # the subpath of your site, e.g. /blog/
-baseurl_category: "/openhr/category/" # the subpath of your categories, e.g. /category/
 url: "https://schlos.github.io" # the base hostname & protocol for your site
 github_repo: openhr # the GitHub repo name for this project
 #
