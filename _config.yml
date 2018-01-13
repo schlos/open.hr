@@ -27,7 +27,7 @@ github_repo: imamopravoznati-admin # the GitHub repo name for this project
 #
 # Site metadata
 full_title: Hrvatska udruga za otvorene sustave i internet
-
+#
 # Site contact details
 owner: Hrvatska udruga za otvorene sustave i internet
 email: name@example.com
@@ -35,8 +35,28 @@ address:
   - line: Unska 3
   - line: "10000 Zagreb, Hrvatska"
   # Feel free to add more lines here 
-telephone: (123) 456-7890
-copyright: Your Site
+telephone: + 385 (0)1 6129 660
+#
+# Company registration and bank information
+org:
+  bank:
+    name: Zagrebačka banka d.d.
+    address: "Trg bana Josipa Jelačića 10, 10000 Zagreb, Hrvatska"
+    account:
+      type: žiro račun
+      iban: HR5023600001101557175
+      swift: ZABAHR2X
+      vbdi: 2360000
+  registration:
+    oib: 09913557986
+    mb: 1602845
+    vat: HR09913557986
+# 
+# Content on this website is licensed under a 
+license_name: Creative Commons Attribution-ShareAlike 4.0 International License
+license_url: http://creativecommons.org/licenses/by-sa/4.0/deed.en_US
+# Copyright - leave blank to use open license instead
+copyright:
 # 
 # Optional social link, you can choose from the following options:
 # twitter (default), instagram, medium, or dribbble

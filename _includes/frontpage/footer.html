@@ -2,18 +2,37 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h4><strong>{{ site.owner }}</strong>
-        </h4>
+        <h4><strong>Kontaktirajte nas</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>
+          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+        </ul>
+
+        <h3><strong><i class="fa fa-id-card-0 fa-fw"></i> Osobna iskaznica</strong></h3>
+        <p><strong>{{ site.owner }}</strong></p>
         <p>
           {% for address in site.address %}
           {{ address.line }}<br>
           {% endfor %}
         </p>
         <ul class="list-unstyled">
-          <li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </li>
+          <li><strong>{{ site.owner }}</strong></li>
+          <li>OIB: {{ site.org.registration.oib }}</li>
+          <li>VAT number: {{ site.org.registration.vat }}</li>
+          <li>Matični broj: {{ site.org.registration.mb }}</li>
+          <li>IBAN: {{ site.org.bank.account.iban }} ({{ site.org.bank.account.type }})</li>
         </ul>
+
+        <h3><strong>Podaci o banci</strong></h3>
+        <ul class="list-unstyled">
+          <li>Naziv: {{ site.org.bank.name }}</li>
+          <li>Adresa: {{ site.org.bank.address }}</li>
+          <li>IBAN: {{ site.org.bank.account.iban }}</li>
+          <li>SWIFT: {{ site.org.bank.account.swift }}</li>
+          <li>VBDI: {{ site.org.bank.account.vbdi }}</li>
+        </ul>
+
         <br>
         <ul class="list-inline">
           <li>
@@ -27,7 +46,7 @@
           </li>
         </ul>
         <hr class="small">
-        <p class="text-muted">Copyright &copy; {{ site.copyright }} 20{{ site.time | date: '%y' }}</p>
+        <p class="text-muted">{% if site.copyright %}Copyright &copy; {{ site.copyright }} 20{{ site.time | date: '%y' }}{% else %}Sadržaj ove stranice licenciran je pod <a href="{{ site.license_url }}" target="_blank">{{ site.license_name }}</a>{% endif %}</p>
       </div>
     </div>
   </div>
